@@ -255,3 +255,15 @@ h3 {
      font-size: 1.85em;
     columns: #fff;
 }
+
+p a {
+  text-decoration: none;
+  color: #fff;
+  transition: color .3s, font-size .3s;
+  -webkit-transition: color .3s, font-size .3s;
+}
+
+p a:hover {
+  color: rgb(143, 211, 166);
+  font-size: 1.1em;
+}

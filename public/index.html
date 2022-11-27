@@ -3,7 +3,7 @@
   <head>
     <title>Lectii de viata la un click distanta!</title>
     <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
   </head>
   <body>
     <header>
@@ -25,31 +25,44 @@
     </header>
     <section>
       <img src="assets/books.png" id="books" />
-      <h2 id="text">Lecții de viață la un<br> click distanță!</h2>
+      <h2 id="text">
+        Lecții de viață la un<br />
+        click distanță!
+      </h2>
       <a href="#sec" id="btn"><b>Explore!</b></a>
     </section>
     <div class="sec" id="sec">
-      <h2>Are you tired of bored people explaining how to do something on a tutorial?</h2>
+      <h2>
+        Are you tired of bored people explaining how to do something on a
+        tutorial?
+      </h2>
       <p>
-        <br>
-        You're in the right place. <br><br>
-        This website connects you with:<br>
-        -  people that <b>WANT</b> to teach you things at an affordable price; <br>
-        -  people that <b>WANT</b> to stay in touch with you, even after you are done learning; <br>
-        -  people that are also like <b>YOU</b>, students that want to learn something from others;
+        <br />
+        You're in the right place. <br /><br />
+        This website connects you with:<br />
+        - people that <b>WANT</b> to teach you things at an affordable price;
+        <br />
+        - people that <b>WANT</b> to stay in touch with you, even after you are
+        done learning; <br />
+        - people that are also like <b>YOU</b>, students that want to learn
+        something from others; <br />
+        <br />
+        If you are interested in learning a new programming language, <a href="invata.html">click here!</a>
+         <br>If you want to teach others a programming language, <a href="preda.html">click here!</a><br>
       </p>
     </div>
-  <script>
-    let books = document.getElementById('books');
-    let text = document.getElementById('text');
-    let btn = document.getElementById('btn');
+    <script>
+      let books = document.getElementById("books");
+      let text = document.getElementById("text");
+      let btn = document.getElementById("btn");
 
-    window,addEventListener("scroll", function() {
-      let value = window.scrollY;
-      books.style.right = value*-1.5 + 'px';
-      text.style.marginLeft = value*(-3) + 'px';
-      btn.style.marginLeft = value*(-3) + 'px';
-    })
-  </script>
+      window,
+        addEventListener("scroll", function () {
+          let value = window.scrollY;
+          books.style.right = value * -1.5 + "px";
+          text.style.marginLeft = value * -3 + "px";
+          btn.style.marginLeft = value * -3 + "px";
+        });
+    </script>
   </body>
 </html>
