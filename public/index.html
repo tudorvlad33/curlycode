@@ -12,10 +12,10 @@
           <a href="index.html" class="active">Home</a>
         </li>
         <li>
-          <a href="preda.html">Predă</a>
+          <a href="preda.html">Teach</a>
         </li>
         <li>
-          <a href="invata.html">Învață</a>
+          <a href="invata.html">Learn</a>
         </li>
         <li>
           <a href="contact.html">Contact</a>
@@ -24,33 +24,32 @@
     </header>
     <section>
       <img src="assets/books.png" id="books" />
-      <h2 id="text">Lectii de viata la un click distanta!</h2>
-      <a href="#" class="btn">Exploreaza</a>
+      <h2 id="text">Lecții de viață la un<br> click distanță!</h2>
+      <a href="#sec" id="btn"><b>Explore!</b></a>
     </section>
-    <div class="sec">
-      <h2>Ce va poate oferi acest site:</h2>
+    <div class="sec" id="sec">
+      <h2>Are you tired of bored people explaining how to do something on a tutorial that eventually you’re not going to get done or of the overpriced learning sessions?</h2>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-        malesuada est ac leo imperdiet, et facilisis diam imperdiet. Nam in diam
-        vel lorem laoreet imperdiet. Curabitur at finibus mi, eget vehicula
-        eros. Morbi egestas aliquet turpis, eu fermentum risus lobortis vitae.
-        In dui lorem, auctor eu ultrices aliquam, pellentesque sit amet dolor.
-        Nam facilisis aliquam magna sit amet condimentum. Quisque at dolor ex.
-        Etiam egestas ultricies nisl id imperdiet. Sed porta rhoncus sem ut
-        mollis. <br> <br> Maecenas non molestie nunc. Sed eu sagittis neque, non aliquam
-        justo. Pellentesque tempus eleifend nulla sit amet ultrices. Integer
-        sodales, dolor vitae hendrerit tincidunt, lectus dui ornare leo, et
-        aliquam mi diam ut nulla. Sed in commodo augue. Phasellus felis turpis,
-        eleifend ultrices mollis nec, facilisis ut diam. Integer tortor magna,
-        mattis a luctus non, mollis congue lacus. Curabitur maximus urna eget
-        purus elementum facilisis in sit amet est. Nullam a maximus quam. Nam
-        congue odio dui, id luctus nisl condimentum ut. Sed efficitur, nisl vel
-        lacinia pharetra, nunc nunc accumsan risus, nec bibendum elit risus nec
-        metus. Maecenas tristique id quam faucibus finibus. Nunc interdum, diam
-        vel fringilla lobortis, neque justo suscipit nulla, in commodo diam mi
-        mattis sem.
+        You're in the right place. 
+        This website connects you with:
+        <ul>
+          <li>people that WANT to teach you things at an affordable price</li>
+          <li>people that WANT to stay in touch with you, even after you're done learning</li>
+          <li>people that are also like YOU, students that want to learn something by teaching</li>
+        </ul>
       </p>
     </div>
-  
+  <script>
+    let books = document.getElementById('books');
+    let text = document.getElementById('text');
+    let btn = document.getElementById('btn');
+
+    window,addEventListener("scroll", function() {
+      let value = window.scrollY;
+      books.style.right = value*-1.5 + 'px';
+      text.style.marginLeft = value*(-3) + 'px';
+      btn.style.marginLeft = value*(-3) + 'px';
+    })
+  </script>
   </body>
 </html>

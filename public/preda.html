@@ -2,82 +2,69 @@
 <html>
   <head>
     <title>
-      Contact us
+      Contact
     </title>
     <!-- MATERIAL DESIGN ICONIC FONT -->
 		<link rel="stylesheet" href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
 		<!-- STYLE CSS -->
 		<link rel="stylesheet" href="css/stylecontact.css";
+    
   </head>
   <body>
     <header>
-        <a href="index.html" class="logo"><img src="assets/logo site.png"></a>
-        <ul>
-          <li>
-            <a href="index.html">Home</a>
-          </li>
-          <li>
-            <a href="preda.html">Predă</a>
-          </li>
-          <li>
-            <a href="invata.html">Învață</a>
-          </li>
-          <li>
-            <a href="contact.html">Contact</a>
-          </li>
-        </ul>
-      </header>
+      <a href="index.html"><img class="logo" src="assets/logo site.png" /></a>
+      <ul>
+        <li>
+          <a href="index.html" class="active">Home</a>
+        </li>
+        <li>
+          <a href="preda.html">Teach</a>
+        </li>
+        <li>
+          <a href="invata.html">Learn</a>
+        </li>
+        <li>
+          <a href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </header>
       <main>
         <div class="wrapper">
           <div class="inner">
-            <form method="POST" action="https://script.google.com/macros/s/AKfycbzsdO6pl9zvbBzthrk25MYhd5y2jQpiN_WyuObYd2_EFqH1spbmq3SknDu4NFnDnhngAw/exec">
-              <h3>Want to be a tutor? Contact Us!</h3>
+            <form method="POST" action="https://script.google.com/macros/s/AKfycbweUowlrGeAL3E0nWgUjcz0wlxr7jTSIu8k-4nUdp4JsVDpgQ6rxu6_dHhWBBjQFb_D6g/exec">              
+              <h3>Want to be a mentor? Contact us!</h3>
               <label class="form-group">
-                <input name="full_name" type="text" class="form-control"  required>
-                <span>Your Name</span>
+                <input name="Nume" type="text" class="form-control"  required>
+                <span>Your name</span>
                 <span class="border"></span>
               </label>
               <label class="form-group">
-                <input name="email" type="text" class="form-control"  required>
-                <span for="">Your Mail</span>
+                <input name="Email" type="email" class="form-control"  required>
+                <span for="">Email address</span>
                 <span class="border"></span>
               </label>
               <label class="form-group">
-                <input name="price" type="text" class="form-control"  required>
-                <span>Your Price</span>
+                <input name="Pret" type="number" class="form-control"  required>
+                <span>Price asked</span>
                 <span class="border"></span>
               </label>
               <label class="form-group">
-                <input name="language" type="text" class="form-control"  required>
-                <span>Language</span>
+                <input name="Limbaj" type="text" class="form-control"  required>
+                <span>Programming language</span>
                 <span class="border"></span>
               </label>
-              <button>Submit 
+              <label class="form-group">
+                <input name="description" type="text" class="form-control" required>
+                <span>Short description</span>
+                <span class="border"></span>
+              </label>
+              <button type="submit" value="submit">Submit 
                 <i class="zmdi zmdi-arrow-right"></i>
               </button>
             </form>
           </div>
         </div>
       </main>
-    <footer>
-      <ul>
-        <li>
-          <a href="#"><FontAwesomeIcon icon="fa-brands fa-instagram" /></a>
-        </li>
-      
-        <li>
-          <a href="#"><img src="assets/facebook.png"></a>
-        </li>
-      
-        <li>
-          <a href="#"><img src="assets/tiktok.png"></a>
-        </li>
-      
-        <li>
-          <a href="#"><img src="assets/snapcht.png"></a>
-        </li>
-      </ul>
-    </footer>
   </body>
   
 </html>

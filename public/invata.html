@@ -1,25 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>
-      Lectii de viata la un click distanta!
-    </title>
-    <link rel="stylesheet" type="text/css" href="css/styleinvata.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Lectii de viata la un click distanta!</title>
 
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/table.css" />
   </head>
   <body>
     <header>
-      <a href="index.html" class="logo"><img src="assets/logo site.png"></a>
+      <a href="index.html"><img class="logo" src="assets/logo site.png" /></a>
       <ul>
         <li>
-          <a href="index.html">Home</a>
+          <a href="index.html" class="active">Home</a>
         </li>
         <li>
-          <a href="preda.html">Predă</a>
+          <a href="preda.html">Teach</a>
         </li>
         <li>
-          <a href="invata.html">Învață</a>
+          <a href="invata.html">Learn</a>
         </li>
         <li>
           <a href="contact.html">Contact</a>
@@ -27,104 +25,354 @@
       </ul>
     </header>
     <main>
-      <div>
-      <h1 data-text="Start_learning">Start_learning</h1>
-      
-    </div>
-    <table id="customers">
-      <tr>
-        <th>Name</th>
-        <th>Programming language</th>
-        <th>Price</th>
-        <th>Mail</th>
-      </tr>
-      <tr>
-        <td>Alfreds Futterkiste</td>
-        <td>Maria Anders</td>
-        <td>Germany</td>
-        <td>Germany</td>
-      </tr>
-      <tr>
-        <td>Berglunds snabbköp</td>
-        <td>Germany</td>
-        <td>Christina Berglund</td>
-        <td>Sweden</td>
-      </tr>
-      <tr>
-        <td>Centro comercial Moctezuma</td>
-        <td>Francisco Chang</td>
-        <td>Germany</td>
-        <td>Mexico</td>
-      </tr>
-      <tr>
-        <td>Ernst Handel</td>
-        <td>Germany</td>
-        <td>Roland Mendel</td>
-        <td>Austria</td>
-      </tr>
-      <tr>
-        <td>Island Trading</td>
-        <td>Helen Bennett</td>
-        <td>Germany</td>
-        <td>UK</td>
-      </tr>
-      <tr>
-        <td>Königlich Essen</td>
-        <td>Philip Cramer</td>
-        <td>Germany</td>
-        <td>Germany</td>
-      </tr>
-      <tr>
-        <td>Laughing Bacchus Winecellars</td>
-        <td>Yoshi Tannamuri</td>
-        <td>Germany</td>
-        <td>Canada</td>
-      </tr>
-      <tr>
-        <td>Magazzini Alimentari Riuniti</td>
-        <td>Giovanni Rovelli</td>
-        <td>Germany</td>
-        <td>Italy</td>
-      </tr>
-      <tr>
-        <td>North/South</td>
-        <td>Simon Crowther</td>
-        <td>Germany</td>
-        <td>UK</td>
-      </tr>
-      <tr>
-        <td>Paris spécialités</td>
-        <td>Marie Bertrand</td>
-        <td>Germany</td>
-        <td>France</td>
-      </tr>
-    </table>
-    </main>
-    <footer>
-      <div class="footer">
-          <table class="tabel" width="99%">
-              <tr>
-                  <td width="33%">
-                      <h4 class="footer_title">
+      <h3 id="citat">Ready to learn? Search for your perfect mentor!</h3>
+      <div class="tabel">
+        <table id="customers" class="content-table">
+          <thead>
+            <tr>
+              <th>
+                <input
+                  type="text"
+                  class="search"
+                  id="myInput"
+                  onkeyup="tableSearch()"
+                  placeholder="Search a programming language"
+                />
+              </th>
+              <th></th>
+              <th></th>
+              <th></th>
+            </tr>
+            <tr>
+              <th data-sort onclick="sortTable(0,this)">Name</th>
+              <th data-sort onclick="sortTable(1,this)">
+                Programming language
+              </th>
+              <th data-sort onclick="sortTable(2,this)">Price(USD/hour)</th>
+              <th data-sort onclick="sortTable(3,this)">Mail</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="teacher" href="teacher_page.html" id="teacher_link">Alfreds Futterkiste</a></td>
+              <td>java</td>
+              <td>10</td>
+              <td>alfutter@gmail.com</td>
+            </tr>
+            <tr>
+              <td>Berglunds snabbköp</td>
+              <td>c++</td>
+              <td>20</td>
+              <td>Bergop@gmail.com</td>
+            </tr>
+            <tr>
+              <td>Emi</td>
+              <td>go</td>
+              <td>30</td>
+              <td>emanuelemi@gmail.com</td>
+            </tr>
+            <tr>
+              <td>Ernesto</td>
+              <td>pearl</td>
+              <td>25</td>
+              <td>ernestoo123@gmail.com</td>
+            </tr>
+            <tr>
+              <td>Murgocea Lavinia</td>
+              <td>go </td>
+              <td>15</td>
+              <td>murgonia@gmail.com</td>
+            </tr>
+            <tr>
+              <td>Armin Cbum</td>
+              <td>flutter </td>
+              <td>23</td>
+              <td>Germany</td>
+            </tr>
+            <tr>
+              <td>Cornelia Mestecanescu</td>
+              <td>pascal</td>
+              <td>10</td>
+              <td>Canada</td>
+            </tr>
+            <tr>
+              <td>Virginia Evangelia</td>
+              <td>c</td>
+              <td>30</td>
+              <td>virginelia@gmail.com</td>
+            </tr>
+            <tr>
+              <td>North/South</td>
+              <td>Simon Crowther</td>
+              <td>30</td>
+              <td>UK</td>
+            </tr>
+            <tr>
+              <td>Paris spécialités</td>
+              <td>Marie Bertrand</td>
+              <td>30</td>
+              <td>France</td>
+            </tr>
+            <tr>
+              <td>North/South</td>
+              <td>Simon Crowther</td>
+              <td>30</td>
+              <td>UK</td>
+            </tr>
+            <tr>
+              <td>North/South</td>
+              <td>Simon Crowther</td>
+              <td>30</td>
+              <td>UK</td>
+            </tr>
+            <tr>
+              <td>North/South</td>
+              <td>Simon Crowther</td>
+              <td>30</td>
+              <td>UK</td>
+            </tr>
+            <tr>
+              <td>North/South</td>
+              <td>Simon Crowther</td>
+              <td>30</td>
+              <td>UK</td>
+            </tr>
+            <tr>
+              <td>North/South</td>
+              <td>Simon Crowther</td>
+              <td>30</td>
+              <td>UK</td>
+            </tr>
+            <tr>
+              <td>North/South</td>
+              <td>Simon Crowther</td>
+              <td>30</td>
+              <td>UK</td>
+            </tr>
+            <tr>
+              <td>North/South</td>
+              <td>Simon Crowther</td>
+              <td>30</td>
+              <td>UK</td>
+            </tr>
+            <tr>
+              <td>North/South</td>
+              <td>Simon Crowther</td>
+              <td>30</td>
+              <td>UK</td>
+            </tr>
+            <tr>
+              <td>North/South</td>
+              <td>Simon Crowther</td>
+              <td>30</td>
+              <td>UK</td>
+            </tr>
+            <tr>
+              <td>North/South</td>
+              <td>Simon Crowther</td>
+              <td>30</td>
+              <td>UK</td>
+            </tr>
+            <tr>
+              <td>North/South</td>
+              <td>Simon Crowther</td>
+              <td>30</td>
+              <td>UK</td>
+            </tr>
+            <tr>
+              <td>North/South</td>
+              <td>Simon Crowther</td>
+              <td>30</td>
+              <td>UK</td>
+            </tr>
+            <tr>
+              <td>North/South</td>
+              <td>Simon Crowther</td>
+              <td>30</td>
+              <td>UK</td>
+            </tr>
+            <tr>
+              <td>North/South</td>
+              <td>Simon Crowther</td>
+              <td>30</td>
+              <td>UK</td>
+            </tr>
+            <tr>
+              <td>North/South</td>
+              <td>Simon Crowther</td>
+              <td>30</td>
+              <td>UK</td>
+            </tr>
+            <tr>
+              <td>North/South</td>
+              <td>Simon Crowther</td>
+              <td>30</td>
+              <td>UK</td>
+            </tr>
+            <tr>
+              <td>North/South</td>
+              <td>Simon Crowther</td>
+              <td>30</td>
+              <td>UK</td>
+            </tr>
+            <tr>
+              <td>North/South</td>
+              <td>Simon Crowther</td>
+              <td>30</td>
+              <td>UK</td>
+            </tr>
+            <tr>
+              <td>North/South</td>
+              <td>Simon Crowther</td>
+              <td>30</td>
+              <td>UK</td>
+            </tr>
 
-                      </h4>
+            <tr>
+              <td>North/South</td>
+              <td>Simon Crowther</td>
+              <td>30</td>
+              <td>UK</td>
+            </tr>
+            <tr>
+              <td>North/South</td>
+              <td>Simon Crowther</td>
+              <td>30</td>
+              <td>UK</td>
+            </tr>
+            <tr>
+              <td>North/South</td>
+              <td>Simon Crowther</td>
+              <td>30</td>
+              <td>UK</td>
+            </tr>
+            <tr>
+              <td>North/South</td>
+              <td>Simon Crowther</td>
+              <td>30</td>
+              <td>UK</td>
+            </tr>
+            <tr>
+              <td>North/South</td>
+              <td>Simon Crowther</td>
+              <td>30</td>
+              <td>UK</td>
+            </tr>
+            <tr>
+              <td>North/South</td>
+              <td>Simon Crowther</td>
+              <td>30</td>
+              <td>UK</td>
+            </tr>
+            <tr>
+              <td>North/South</td>
+              <td>Simon Crowther</td>
+              <td>30</td>
+              <td>UK</td>
+            </tr>
+            <tr>
+              <td>North/South</td>
+              <td>Simon Crowther</td>
+              <td>30</td>
+              <td>UK</td>
+            </tr>
 
-                  </td>
-                  <td width="33%">
-                      <h4 class="footer_title">
-                          Erasmus + <br> European values with manga
-                      </h4>
-
-                  </td>
-                  <td width="33%">
-                      <h4 class="footer_title">
-
-                      </h4>
-                  </td>
-              </tr>
-          </table>
+            <tr>
+              <td>North/South</td>
+              <td>Simon Crowther</td>
+              <td>30</td>
+              <td>UK</td>
+            </tr>
+            <tr>
+              <td>North/South</td>
+              <td>Simon Crowther</td>
+              <td>30</td>
+              <td>UK</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-  </footer> 
+    </main>
+    <script>
+      function sortTable(n, evt) {
+        var table = document.querySelector("table"),
+          thead = document.querySelector("thead"),
+          tbody = table.querySelector("tbody"),
+          bRows = [...tbody.rows],
+          hData = [...thead.querySelectorAll("th")],
+          desc = false;
+        hData.map((head) => {
+          if (head != evt) {
+            head.classList.remove("asc", "desc");
+          }
+        });
+        desc = evt.classList.contains("asc") ? true : false;
+        evt.classList[desc ? "remove" : "add"]("asc");
+        evt.classList[desc ? "add" : "remove"]("desc");
+        tbody.innerHTML = "";
+
+        bRows.sort((a, b) => {
+          console.log(n);
+          let x = a.getElementsByTagName("td")[n].innerHTML.toLowerCase(),
+            y = b.getElementsByTagName("td")[n].innerHTML.toLowerCase();
+          console.log(x, y);
+          return desc ? (x < y ? 1 : -1) : x < y ? -1 : 1;
+        });
+        bRows.map((bRow) => {
+          tbody.appendChild(bRow);
+        });
+      }
+      function sortTableInt(n, evt) {
+        var table = document.querySelector("table"),
+          thead = document.querySelector("thead"),
+          tbody = table.querySelector("tbody"),
+          bRows = [...tbody.rows],
+          hData = [...thead.querySelectorAll("th")],
+          desc = false;
+        hData.map((head) => {
+          if (head != evt) {
+            head.classList.remove("asc", "desc");
+          }
+        });
+        desc = evt.classList.contains("asc") ? true : false;
+        evt.classList[desc ? "remove" : "add"]("asc");
+        evt.classList[desc ? "add" : "remove"]("desc");
+        tbody.innerHTML = "";
+
+        bRows.sort((a, b) => {
+          console.log(n);
+          let x = a.getElementsByTagName("td")[n].innerHTML,
+            y = b.getElementsByTagName("td")[n].innerHTML;
+          console.log(x, y);
+          return desc ? (x < y ? 1 : -1) : x < y ? -1 : 1;
+        });
+        bRows.map((bRow) => {
+          tbody.appendChild(bRow);
+        });
+      }
+    </script>
+    <script type="application/javascript">
+      function tableSearch() {
+        let input, filter, table, tr, td, txtValue;
+
+        //Intialising Variables
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("customers");
+        tr = table.getElementsByTagName("tr");
+
+        for (let i = 0; i < tr.length; i++) {
+          td = tr[i].getElementsByTagName("td")[1];
+          if (td) {
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              tr[i].style.display = "";
+            } else {
+              tr[i].style.display = "none";
+            }
+          }
+        }
+      }
+    </script>
   </body>
-  
 </html>
